@@ -1,5 +1,12 @@
 require('dotenv').config();
+const fs = require('fs');
 const { ShardingManager } = require('discord.js');
+
+if (!fs.existsSync('./.env')) {
+    fs.copyFileSync('./.env.example', './.env');
+    console.error('Please add your Discord bot\'s authentication token to .env.');
+    process.exit(1);
+}
 
 if (!process.env.DISCORD_AUTH_TOKEN) {
     console.error('[ERROR] Please provide a Discord authentication token!');
