@@ -1,0 +1,23 @@
+{
+  "name": "package-skeleton-discordjs",
+  "version": "1.0.0",
+  "description": "A skeleton repository for Discord.js projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakyeRU/package-skeleton-discordjs.git"
+  },
+  "author": "JakyeRU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JakyeRU/package-skeleton-discordjs/issues"
+  },
+  "homepage": "https://github.com/JakyeRU/package-skeleton-discordjs#readme",
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0"
+  }
+}
