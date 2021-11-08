@@ -17,4 +17,13 @@ eventFiles.forEach(file => {
     }
 });
 
+// Shard Manager \\
+process.on('message', message => {
+    if (!message.type) return false;
+
+    switch (message.type) {
+        case 'shardId': client.shardId = message.data.shardId; process.emit('updateClientActivity');
+    }
+});
+
 client.login(process.env.DISCORD_AUTH_TOKEN).catch(console.error);
