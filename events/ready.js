@@ -2,6 +2,7 @@ module.exports = {
     name: 'ready',
     once: true,
     execute(client) {
+        // Listens for the updateClientActivity event and updates the client presence.
         process.once('updateClientActivity', () => {
             console.log(`[INFO] Connected to Discord as ${client.user.tag} on Shard ${client.shardId}.`);
 

@@ -6,7 +6,7 @@ const client = new Discord.Client({
     intents: ['GUILDS']
 });
 
-// Event Manager \\
+// Event Manager - Reads all events from the events folder and listens for them. \\
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 eventFiles.forEach(file => {
     const event = require(`./events/${file}`);
@@ -17,7 +17,7 @@ eventFiles.forEach(file => {
     }
 });
 
-// Shard Manager \\
+// Shard Manager - Listens for the shardId from the parent process and adds it to the client. \\
 process.on('message', message => {
     if (!message.type) return false;
 
