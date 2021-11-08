@@ -1,18 +1,19 @@
-const { Client } = require('discord.js');
-
 module.exports = {
     name: 'ready',
     once: true,
     execute(client) {
-        console.log(`Logged in as ${client.user.tag}!`);
-        client.user.setPresence({
-            activities: [
-                {
-                    name: 'https://github.com/JakyeRU/package-skeleton-discordjs',
-                    type: 'PLAYING'
-                }
-            ],
-            status: 'online'
+        process.once('updateClientActivity', () => {
+            console.log(`[INFO] Connected to Discord as ${client.user.tag} on Shard ${client.shardId}.`);
+
+            client.user.setPresence({
+                activities: [
+                    {
+                        name: `on Shard ${client.shardId} - https://github.com/JakyeRU/package-skeleton-discordjs`,
+                        type: 'PLAYING'
+                    }
+                ],
+                status: 'online'
+            });
         });
     }
 }

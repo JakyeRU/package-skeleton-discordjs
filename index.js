@@ -6,7 +6,14 @@ const manager = new ShardingManager('./bot.js', {
 });
 
 manager.on('shardCreate', shard => {
-    console.log(`Launched shard ${shard.id + 1}.`);
+    console.log(`[INFO] Launched Shard ${shard.id + 1}.`);
+
+    shard.on('ready', () => {
+        shard.send({
+            type: 'shardId',
+            data: {shardId: shard.id + 1}
+        }).catch(console.error);
+    })
 });
 
 manager.spawn().catch(console.error);
