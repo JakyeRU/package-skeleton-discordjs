@@ -4,7 +4,8 @@
   "description": "A skeleton repository for Discord.js projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node deploy-commands.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/JakyeRU/package-skeleton-discordjs#readme",
   "dependencies": {
+    "@discordjs/builders": "^0.8.2",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.24.0",
     "discord.js": "^13.3.1",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "prompt-sync": "^4.2.0"
   }
 }
