@@ -18,7 +18,7 @@ module.exports = {
         if (!interaction.isCommand()) return false;
 
         // Making sure the command is bound to a file.
-        if (client.commands.has(interaction.commandName)) {
+        if (!client.commands.has(interaction.commandName)) {
             interaction.reply({
                 embeds: [embed.error('NOT_BOUND')],
                 ephemeral: true
