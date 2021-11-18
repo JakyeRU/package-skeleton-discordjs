@@ -5,7 +5,7 @@ const { ShardingManager } = require('discord.js');
 // Copying .env.example to .env if it doesn't exist.
 if (!fs.existsSync('./.env')) {
     fs.copyFileSync('./.env.example', './.env');
-    console.error('[ERROR] Please add your Discord bot\'s authentication token to .env.');
+    console.error('[ERROR] The .env file was missing so we created it for you. Please update it with your Discord bot\'s authentication token.');
     process.exit(1);
 }
 
