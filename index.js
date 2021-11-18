@@ -11,7 +11,7 @@ if (!fs.existsSync('./.env')) {
 
 // Making sure there is a token in .env.
 if (!process.env.DISCORD_AUTH_TOKEN) {
-    console.error('[ERROR] Please provide a Discord authentication token!');
+    console.error('[ERROR] Please update the .env file with your Discord bot\'s authentication token.');
     process.exit(1);
 }
 
