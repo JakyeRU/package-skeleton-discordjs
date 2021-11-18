@@ -1,6 +1,15 @@
+const {Client} = require("discord.js");
+/**
+ * Listens to the ready event.
+ * @type {{once: boolean, name: string, execute(*): void}}
+ */
 module.exports = {
     name: 'ready',
     once: true,
+    /**
+     * Executes the event.
+     * @param {Client} client
+     */
     execute(client) {
         // Listens for the updateClientActivity event and updates the client presence.
         process.once('updateClientActivity', () => {
