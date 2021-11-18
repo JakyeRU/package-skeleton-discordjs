@@ -1,4 +1,4 @@
-const {Client, CommandInteraction} = require("discord.js");
+const { Client, CommandInteraction } = require("discord.js");
 const Embed = require('../helpers/embed');
 const embed = new Embed();
 /**

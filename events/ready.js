@@ -1,4 +1,4 @@
-const {Client} = require("discord.js");
+const { Client } = require("discord.js");
 const configuration = require("../configuration.json");
 const fs = require("fs");
 /**
