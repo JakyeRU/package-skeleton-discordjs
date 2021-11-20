@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://github.com/JakyeRU/package-skeleton-discordjs" target="_blank">
-        <img src="https://raw.githubusercontent.com/JakyeRU/package-skeleton-discordjs/main/logo/package-skeleton-discordjs-logos_white.png" height=400>
+        <img src="https://raw.githubusercontent.com/JakyeRU/package-skeleton-discordjs/main/logo/package-skeleton-discordjs-logos_white.png" height=200>
     </a>
 </p>
 
