@@ -47,6 +47,7 @@ Your bot is now running and ready to use.
 
 # About configuration.json
 `DISCORD_CLIENT_ID` - This is the client id of your Discord bot. _You shouldn't worry about setting it manually as we will automatically set it for you._
+
 `DISCORD_TESTING_GUILD_ID` - This is the id of the guild where [guild slash commands](https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands) will be registered.
 
 ### Why do I need a testing guild?
