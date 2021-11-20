@@ -14,7 +14,7 @@
 </p>
 
 # About package-skeleton-discordjs
-package-skeleton-discordjs is a template that uses the latest [discord.js](https://github.com/discordjs/discord.js) version to create a discord.js project in minutes without the hassle of creating each file individually.
+package-skeleton-discordjs is a template that uses the latest [discord.js](https://github.com/discordjs/discord.js) version to help you create a project in minutes without the hassle of creating each file individually.
 
 # Features
 - slash commands support;
