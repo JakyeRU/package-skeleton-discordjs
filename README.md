@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/JakyeRU/package-skeleton-discordjs" target="_blank">
-        <img src="https://raw.githubusercontent.com/JakyeRU/package-skeleton-discordjs/main/logo/package-skeleton-discordjs-logos_white.png" width="400">
+        <img src="https://raw.githubusercontent.com/JakyeRU/package-skeleton-discordjs/main/logo/package-skeleton-discordjs-logos_white.png" width="400">        
     </a>
 </p>
 
@@ -48,3 +48,10 @@ Your bot is now running and ready to use.
 
 ### Why do I need a testing guild?
 > Global commands are cached for one hour. New global commands will fan out slowly across all guilds and will only be guaranteed to be updated after an hour. Guild commands update instantly. As such, we recommend you use guild-based commands during development and publish them to global commands when they're ready for public use. ~ https://discordjs.guide
+
+---
+# The `npm run deploy` command
+The `npm run deploy` command will deploy the slash commands from your project to Discord. Upon running this command, it will ask you if you want to deploy the commands to the testing guild or globally.
+> Do you want to deploy the commands globally? If yes, type "YES", otherwise don't type anything:
+
+If you say "YES", the commands will be deployed globally, otherwise they will be deployed to the testing guild provided in the `configuration.json` file (`DISCORD_TESTING_GUILD_ID`).
