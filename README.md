@@ -1,7 +1,3 @@
-[comment]: <> (# package-skeleton-discordjs)
-
-[comment]: <> (A skeleton repository for Discord.js projects.)
-
 <p align="center">
     <a href="https://github.com/JakyeRU/package-skeleton-discordjs" target="_blank">
         <img src="https://raw.githubusercontent.com/JakyeRU/package-skeleton-discordjs/main/logo/package-skeleton-discordjs-logos_white.png" width="400">
