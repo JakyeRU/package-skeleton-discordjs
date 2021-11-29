@@ -1,0 +1,23 @@
+name: Cypress
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm start
+        env:
+          CYPRESS_DISCORD_USER_ID: "915014630290636860"
+          DISCORD_AUTH_TOKEN: ${{ secrets.DISCORD_AUTH_TOKEN }}
+          DISCORD_BASE_URL: "https://discord.com/api"
