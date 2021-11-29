@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+        uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 12.x
           start: npm start
         env:
           CYPRESS_DISCORD_USER_ID: "915014630290636860"
