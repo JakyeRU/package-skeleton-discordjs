@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "start:bot": "node bot.js",
     "test": "node ./node_modules/cypress/bin/cypress run",
     "deploy": "node deploy-commands.js"
   },
