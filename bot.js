@@ -36,9 +36,4 @@ process.on('message', message => {
     }
 });
 
-client.login(process.env.DISCORD_AUTH_TOKEN).then(() => {
-    if (process.env.CYPRESS) {
-        console.log(`[INFO] Connected to Discord as ${client.user.id}.`);
-        process.exit(0)
-    }
-}).catch(console.error);
+client.login(process.env.DISCORD_AUTH_TOKEN).catch(console.error);
