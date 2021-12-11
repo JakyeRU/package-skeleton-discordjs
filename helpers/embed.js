@@ -2,8 +2,6 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class Embed {
     constructor() {
-        this.embed = new MessageEmbed();
-
         this.messages = {
             'NOT_ENOUGH_PERMISSIONS': 'You do not have enough permissions to run this command.',
             'NOT_BOUND': 'This command is not bound to a JavaScript file yet.'
@@ -15,14 +13,15 @@ module.exports = class Embed {
      * @constructor
      */
     error(message) {
-        this.embed.setColor(0xff8080);
-        this.embed.setDescription(message ? message : 'Something went wrong.');
+        const embed = new MessageEmbed();
+        embed.setColor(0xff8080);
+        embed.setDescription(message ? message : 'Something went wrong.');
 
         if (this.messages[message]) {
-            this.embed.setDescription(this.messages[message]);
+            embed.setDescription(this.messages[message]);
         }
 
-        return this.embed;
+        return embed;
     }
 
     /**
@@ -30,10 +29,11 @@ module.exports = class Embed {
      * @constructor
      */
     success(message) {
-        this.embed.setColor(0x80ff80);
-        this.embed.setDescription(message ? message : 'Task completed successfully.');
+        const embed = new MessageEmbed();
+        embed.setColor(0x80ff80);
+        embed.setDescription(message ? message : 'Task completed successfully.');
 
-        return this.embed;
+        return embed;
     }
 
     /**
@@ -41,9 +41,10 @@ module.exports = class Embed {
      * @constructor
      */
     loading(message) {
-        this.embed.setColor("#FFFF65");
-        this.embed.setDescription(message ? message : 'Loading... Please wait.');
+        const embed = new MessageEmbed();
+        embed.setColor("#FFFF65");
+        embed.setDescription(message ? message : 'Loading... Please wait.');
 
-        return this.embed;
+        return embed;
     }
 };
